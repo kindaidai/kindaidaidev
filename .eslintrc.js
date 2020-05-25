@@ -24,8 +24,22 @@ module.exports = {
   // https://eslint.org/docs/user-guide/configuring#configuring-rules
   rules: {
     "react/react-in-jsx-scope": "off",
-    "react/jsx-filename-extension": ["warn", { extensions: [".js", ".jsx", ".ts", "tsx"] }],
+    "react/jsx-filename-extension": [
+      "warn",
+      { extensions: [".js", ".jsx", ".ts", "tsx"] },
+    ],
+    "react/jsx-props-no-spreading": ["off"],
+    "@typescript-eslint/no-unused-vars": "error",
     "no-undef": "error",
+    "import/extensions": [
+      "error", "always",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ],
     "prettier/prettier": [
       "error",
       {
@@ -35,5 +49,13 @@ module.exports = {
         tabWidth: 2,
       },
     ],
+  },
+  settings: {
+    "import/extensions": [".js", ".jsx", ".ts", ".tsx"],
+    "import/resolver": {
+      node: {
+        extensions: [".js", ".jsx", ".ts", ".tsx"],
+      },
+    },
   },
 };

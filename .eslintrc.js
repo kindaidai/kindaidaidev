@@ -28,17 +28,19 @@ module.exports = {
       "warn",
       { extensions: [".js", ".jsx", ".ts", "tsx"] },
     ],
-    "react/jsx-props-no-spreading": ["off"],
+    "react/jsx-props-no-spreading": "off",
+    "react/jsx-one-expression-per-line": "off",
     "@typescript-eslint/no-unused-vars": "error",
     "no-undef": "error",
     "import/extensions": [
-      "error", "always",
+      "error",
+      "ignorePackages",
       {
-        "js": "never",
-        "jsx": "never",
-        "ts": "never",
-        "tsx": "never"
-      }
+        js: "never",
+        jsx: "never",
+        ts: "never",
+        tsx: "never",
+      },
     ],
     "prettier/prettier": [
       "error",
@@ -47,10 +49,12 @@ module.exports = {
         semi: false,
         printWidth: 80,
         tabWidth: 2,
+        endOfLine: "auto",
       },
     ],
   },
   settings: {
+    "import/core-modules": ["styled-jsx/css"],
     "import/extensions": [".js", ".jsx", ".ts", ".tsx"],
     "import/resolver": {
       node: {

@@ -30,6 +30,11 @@ module.exports = {
     ],
     "react/jsx-props-no-spreading": "off",
     "react/jsx-one-expression-per-line": "off",
+    "jsx-a11y/anchor-is-valid": ["error", {
+      "components": ["Link"],
+      "specialLink": ["hrefLeft", "hrefRight"],
+      "aspects": ["invalidHref", "preferButton"]
+    }],
     "@typescript-eslint/no-unused-vars": "error",
     "no-undef": "error",
     "import/extensions": [

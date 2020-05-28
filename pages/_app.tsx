@@ -1,20 +1,15 @@
 import { AppProps } from 'next/app'
-import css from 'styled-jsx/css'
-import NavigationBar from '../components/NavigationBar'
-
-const navigationBar = css`
-  div {
-    border-bottom: solid 1px silver;
-  }
-`
+import Icon from '../components/header/Icon'
+import '../styles.css'
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
-      <div className="navigationBar">
-        <NavigationBar />
-      </div>
-      <style jsx>{navigationBar}</style>
+      <header className="text-gray-600 body-font">
+        <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+          <Icon />
+        </div>
+      </header>
       <Component {...pageProps} />
     </>
   )

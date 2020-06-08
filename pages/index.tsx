@@ -9,7 +9,7 @@ export default function Home() {
       </Head>
 
       <main>
-        <h1 className="title">kindaidaidev</h1>
+        <h1 className="title">under development...</h1>
       </main>
     </div>
   )

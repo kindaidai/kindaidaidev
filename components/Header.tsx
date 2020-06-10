@@ -6,8 +6,7 @@ const NavigationBar: React.FC = () => (
     <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
       <Icon />
       <nav className="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center">
-        <NavLink name="about" />
-        <NavLink name="blog" />
+        <NavLink name="about" href="/about" />
       </nav>
       <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
         <a className="ml-3 text-gray-500" href="https://twitter.com/kindai_dai">

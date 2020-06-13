@@ -9,7 +9,7 @@ const NavLink = (props: Props): JSX.Element => {
   const { name, href } = props
   return (
     <Link href={href}>
-      <a className="mr-5 hover:text-gray-900">{name}</a>
+      <a className="hover:text-gray-900">{name}</a>
     </Link>
   )
 }

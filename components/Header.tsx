@@ -5,11 +5,11 @@ const NavigationBar: React.FC = () => (
   <header className="text-gray-600 body-font border-b border-gray-1000">
     <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
       <Icon />
-      <nav className="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center">
+      <nav className="md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center">
         <NavLink name="about" href="/about" />
       </nav>
-      <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
-        <a className="ml-3 text-gray-500" href="https://twitter.com/kindai_dai">
+      <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 sm:justify-start">
+        <a className="text-gray-500" href="https://twitter.com/kindai_dai">
           <svg
             fill="currentColor"
             strokeLinecap="round"

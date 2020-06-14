@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 const About: React.FC = () => (
   <section>
     <div className="container px-5 py-24 mx-auto flex flex-col">
@@ -24,11 +26,20 @@ const About: React.FC = () => (
                 >
                   Curriculum Vitae
                 </a>
+                <Link href="/">
+                  <a className="hover:text-gray-900">blog</a>
+                </Link>
+                <a
+                  href="https://note.com/kindai0911"
+                  className="hover:text-gray-900"
+                >
+                  note(new)
+                </a>
                 <a
                   href="http://kindai-dai.hatenablog.com/"
                   className="hover:text-gray-900"
                 >
-                  Hatena Blog
+                  Hatena(old)
                 </a>
               </div>
             </div>

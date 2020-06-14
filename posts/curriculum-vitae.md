@@ -5,8 +5,8 @@ date: '2020-06-14'
 
 ## code
 ```ruby
-class Test
-  def display
+class Sample
+  def sample_print
     'test'
   end
 end

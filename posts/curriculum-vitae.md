@@ -3,7 +3,7 @@ title: 'テスト投稿です。職務経歴書でmarkdown表示の確認。'
 date: '2020-06-14'
 ---
 
-## codesnipet
+## code
 ```ruby
 class Test
   def display

@@ -12,6 +12,10 @@ class Sample
 end
 ```
 
+↑がRubyのコードブロック
+
+↓がCSSのコードブロック
+
 ```css
 h1 {
   color: red;

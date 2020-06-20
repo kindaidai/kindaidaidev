@@ -80,7 +80,7 @@ export const getPostData = async (id: string | string[] | undefined) => {
     .use(html)
     .use(highlight)
     .use(codeExtra, {
-      transform: (node) =>
+      transform: (node: { meta: any }) =>
         node.meta
           ? {
               before: [

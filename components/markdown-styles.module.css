@@ -67,7 +67,7 @@
 }
 
 .markdown pre {
-  @apply bg-gray-100 rounded p-4;
+  @apply bg-gray-800 rounded p-4;
 }
 
 .markdown pre code {
@@ -96,9 +96,4 @@
 
 .markdown td {
   @apply border py-1 px-3;
-}
-
-/* Override pygments style background color. */
-.markdown .highlight pre {
-  @apply bg-gray-100 !important;
 }

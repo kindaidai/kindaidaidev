@@ -24,6 +24,7 @@
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "remark": "^12.0.0",
+    "remark-code-extra": "^1.0.1",
     "remark-highlight.js": "^6.0.0",
     "remark-html": "^11.0.2",
     "tailwindcss": "^1.4.6"

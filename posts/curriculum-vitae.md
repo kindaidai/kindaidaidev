@@ -4,7 +4,7 @@ date: '2020-06-14'
 ---
 
 ## code
-```ruby
+```ruby sample.rb
 class Sample
   def sample_print
     'test'
@@ -12,7 +12,6 @@ class Sample
 end
 ```
 
-test
 ```css
 h1 {
   color: red;

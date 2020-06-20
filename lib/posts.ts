@@ -4,6 +4,7 @@ import matter from 'gray-matter'
 import remark from 'remark'
 import html from 'remark-html'
 import highlight from 'remark-highlight.js'
+import codeExtra from 'remark-code-extra'
 
 export type AllPostData = {
   id: string
@@ -78,6 +79,28 @@ export const getPostData = async (id: string | string[] | undefined) => {
   const processedContent = await remark()
     .use(html)
     .use(highlight)
+    .use(codeExtra, {
+      transform: (node) =>
+        node.meta
+          ? {
+              before: [
+                {
+                  type: 'element',
+                  tagName: 'div',
+                  properties: {
+                    class: 'text-gray-600 bg-gray-200 rounded-t px-2',
+                  },
+                  children: [
+                    {
+                      type: 'text',
+                      value: node.meta,
+                    },
+                  ],
+                },
+              ],
+            }
+          : null,
+    })
     .process(matterResult.content)
   const contentHtml = processedContent.toString()
 

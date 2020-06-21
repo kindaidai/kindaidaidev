@@ -5,6 +5,7 @@ import remark from 'remark'
 import html from 'remark-html'
 import highlight from 'remark-highlight.js'
 import codeExtra from 'remark-code-extra'
+import breaks from 'remark-breaks'
 
 export type AllPostData = {
   id: string
@@ -77,8 +78,9 @@ export const getPostData = async (id: string | string[] | undefined) => {
 
   // Use remark to convert markdown into HTML string
   const processedContent = await remark()
-    .use(html)
+    .use(breaks)
     .use(highlight)
+    .use(html)
     .use(codeExtra, {
       transform: (node: { meta: any }) =>
         node.meta

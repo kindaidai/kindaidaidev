@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { getAllPostIds, getPostData } from '../../lib/posts'
 import markdownStyles from '../../components/markdown-styles.module.css'
 import { Tag } from '../../components/tag'
+import { Layout } from '../../components/Layout'
 
 type Props = {
   postData: {
@@ -23,30 +24,24 @@ const Post: React.FC<Props> = ({ postData }: Props) => {
         <title>{title}</title>
         <link rel="icon" href="/profile.ico" />
       </Head>
-      <main>
-        <section className="text-gray-700 body-font overflow-hidden">
-          <div className="container md:px-48 sm: px-12 py-10 mx-auto">
-            <div className="-my-8">
-              <h2 className="text-3xl font-extrabold">{title}</h2>
-              <div className="text-gray-500 text-md">{date}</div>
-              <div className={markdownStyles.markdown}>
-                <div
-                  className="py-05"
-                  dangerouslySetInnerHTML={{ __html: contentHtml }}
-                />
-              </div>
-              <div>
-                {tags.map((tag) => (
-                  <Tag name={tag} />
-                ))}
-              </div>
-              <Link href="/">
-                <a className="hover:text-gray-600">TOPへ戻る</a>
-              </Link>
-            </div>
-          </div>
-        </section>
-      </main>
+      <Layout>
+        <h2 className="text-3xl font-extrabold">{title}</h2>
+        <div className="text-gray-500 text-md">{date}</div>
+        <div className={markdownStyles.markdown}>
+          <div
+            className="py-05"
+            dangerouslySetInnerHTML={{ __html: contentHtml }}
+          />
+        </div>
+        <div className="py-4 my-4">
+          {tags.map((tag) => (
+            <Tag name={tag} key={tag} />
+          ))}
+        </div>
+        <Link href="/">
+          <a className="hover:text-gray-600">TOPへ戻る</a>
+        </Link>
+      </Layout>
     </>
   )
 }

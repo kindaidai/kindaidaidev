@@ -10,7 +10,7 @@ type Props = {
 
 export const Content: React.FC<Props> = ({ id, date, title, tags }: Props) => {
   return (
-    <div className="py-2 flex flex-wrap md:flex-no-wrap">
+    <div className="py-2 flex flex-wrap md:flex-no-wrap border-b">
       <div className="md:w-32 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
         <span className="mt-1 text-gray-500 text-md">{date}</span>
       </div>
@@ -21,7 +21,7 @@ export const Content: React.FC<Props> = ({ id, date, title, tags }: Props) => {
           </Link>
         </h2>
         {tags.map((tag) => (
-          <Tag name={tag} />
+          <Tag name={tag} key={tag} />
         ))}
       </div>
     </div>

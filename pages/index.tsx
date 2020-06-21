@@ -2,6 +2,7 @@ import { GetStaticProps } from 'next'
 import Head from 'next/head'
 import { getSortedPostsData, AllPostData } from '../lib/posts'
 import { Content } from '../components/Content'
+import { Layout } from '../components/Layout'
 
 type Props = {
   allPostsData: AllPostData
@@ -14,23 +15,11 @@ const Index: React.FC<Props> = ({ allPostsData }: Props) => {
         <title>kindaidaidev</title>
         <link rel="icon" href="/profile.ico" />
       </Head>
-      <main>
-        <section className="text-gray-700 body-font overflow-hidden">
-          <div className="container md:px-48 sm: px-12 py-10 mx-auto">
-            <div className="-my-8">
-              {allPostsData.map(({ id, title, date, tags }) => (
-                <Content
-                  id={id}
-                  title={title}
-                  date={date}
-                  tags={tags}
-                  key={id}
-                />
-              ))}
-            </div>
-          </div>
-        </section>
-      </main>
+      <Layout>
+        {allPostsData.map(({ id, title, date, tags }) => (
+          <Content id={id} title={title} date={date} tags={tags} key={id} />
+        ))}
+      </Layout>
     </>
   )
 }

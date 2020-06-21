@@ -18,8 +18,14 @@ const Index: React.FC<Props> = ({ allPostsData }: Props) => {
         <section className="text-gray-700 body-font overflow-hidden">
           <div className="container md:px-48 sm: px-12 py-10 mx-auto">
             <div className="-my-8">
-              {allPostsData.map(({ id, title, date }) => (
-                <Content id={id} title={title} date={date} key={id} />
+              {allPostsData.map(({ id, title, date, tags }) => (
+                <Content
+                  id={id}
+                  title={title}
+                  date={date}
+                  tags={tags}
+                  key={id}
+                />
               ))}
             </div>
           </div>

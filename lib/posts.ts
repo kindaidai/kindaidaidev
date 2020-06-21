@@ -11,6 +11,7 @@ export type AllPostData = {
   id: string
   title: string
   date: string
+  tags: string[]
 }[]
 
 type AllPostIds = {
@@ -29,11 +30,12 @@ export const getSortedPostsData: PostsData = () => {
     const id = fileName.replace(/\.md$/, '')
     const fullPath = path.join(postsDirectory, fileName)
     const fileContents = fs.readFileSync(fullPath, 'utf-8')
-    const { title, date } = matter(fileContents).data
+    const { title, date, tags } = matter(fileContents).data
     return {
       id,
       title,
       date,
+      tags,
     }
   })
 

@@ -3,18 +3,20 @@ import Head from 'next/head'
 import Link from 'next/link'
 import { getAllPostIds, getPostData } from '../../lib/posts'
 import markdownStyles from '../../components/markdown-styles.module.css'
+import { Tag } from '../../components/tag'
 
 type Props = {
   postData: {
     id: string
     title: string
     date: string
+    tags: string[]
     contentHtml: string
   }
 }
 
 const Post: React.FC<Props> = ({ postData }: Props) => {
-  const { title, date, contentHtml } = postData
+  const { title, date, tags, contentHtml } = postData
   return (
     <>
       <Head>
@@ -32,6 +34,11 @@ const Post: React.FC<Props> = ({ postData }: Props) => {
                   className="py-05"
                   dangerouslySetInnerHTML={{ __html: contentHtml }}
                 />
+              </div>
+              <div>
+                {tags.map((tag) => (
+                  <Tag name={tag} />
+                ))}
               </div>
               <Link href="/">
                 <a className="hover:text-gray-600">TOPへ戻る</a>

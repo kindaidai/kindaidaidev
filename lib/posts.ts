@@ -90,7 +90,7 @@ export const getPostData = async (id: string | string[] | undefined) => {
                   type: 'element',
                   tagName: 'div',
                   properties: {
-                    class: 'text-gray-600 bg-gray-200 rounded-t px-2',
+                    class: 'text-xs text-gray-600 bg-gray-200 rounded-t px-2',
                   },
                   children: [
                     {

@@ -2,10 +2,10 @@ import Link from 'next/link'
 import { Tag } from './tag'
 
 type Props = {
-  id: string
-  date: string
-  title: string
-  tags: string[]
+  id?: string
+  date?: string
+  title?: string
+  tags?: string[]
 }
 
 export const Content: React.FC<Props> = ({ id, date, title, tags }: Props) => {
@@ -20,7 +20,7 @@ export const Content: React.FC<Props> = ({ id, date, title, tags }: Props) => {
             <a className="hover:text-gray-600">{title}</a>
           </Link>
         </h2>
-        {tags.map((tag) => (
+        {tags?.map((tag) => (
           <Tag name={tag} key={tag} />
         ))}
       </div>

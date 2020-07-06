@@ -61,7 +61,7 @@ module.exports = {
   },
   settings: {
     "import/core-modules": ["styled-jsx/css"],
-    "import/extensions": [".js", ".jsx", ".ts", ".tsx"],
+    // "import/extensions": [".js", ".jsx", ".ts", ".tsx"],
     "import/resolver": {
       node: {
         extensions: [".js", ".jsx", ".ts", ".tsx"],

@@ -27,7 +27,7 @@
     "remark-breaks": "^2.0.1",
     "remark-code-extra": "^1.0.1",
     "remark-highlight.js": "^6.0.0",
-    "remark-html": "^12.0.0",
+    "remark-html": "^15.0.2",
     "tailwindcss": "^1.9.6"
   },
   "devDependencies": {
